@@ -1,0 +1,11 @@
+ID,Name,Age,Gender,Class,Math,Science,English,Total,Pass
+1,Aarav Patel,14,Male,8,78,85,74,237,Yes
+2,Diya Shah,13,Female,7,88,92,81,261,Yes
+3,Rohan Mehta,15,Male,9,65,70,68,203,Yes
+4,Isha Desai,14,Female,8,92,89,95,276,Yes
+5,Krish Joshi,13,Male,7,55,60,58,173,No
+6,Ananya Singh,15,Female,9,84,79,88,251,Yes
+7,Manav Kumar,14,Male,8,73,75,70,218,Yes
+8,Neha Verma,13,Female,7,90,94,89,273,Yes
+9,Aditya Rana,15,Male,9,62,65,60,187,No
+10,Sanya Kapoor,14,Female,8,85,88,84,257,Yes
