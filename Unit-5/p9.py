@@ -9,30 +9,21 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE IF NOT EXISTS customers(name VARCHAR(20), city VARCHAR(20))")
+mycursor.execute("CREATE TABLE IF NOT EXISTS student(sid int, name VARCHAR(20), city VARCHAR(20))")
 
-sql = "INSERT INTO customers VALUES(%s, %s)"
-val = [
-    ("Jayesh", "Rajkot"),
-    ("Ramesh", "Mumbai"),
-    ("Amit", "Ahmedabad")
-]
+mycursor.execute("INSERT INTO student VALUES(101, 'Jayesh', 'Morbi')")
+mycursor.execute("INSERT INTO student VALUES(102, 'Ramesh', 'Mumbai')")
+mycursor.execute("INSERT INTO student VALUES(103, 'Kalpesh', 'Rajkot')")
+mycursor.execute("INSERT INTO student VALUES(104, 'Raju', 'Jamanagar')")
+mycursor.execute("INSERT INTO student VALUES(105, 'Hemang', 'Morbi')")
 
-mycursor.executemany(sql, val)
 mydb.commit()
 
 print("Records inserted successfully")
 
-mycursor.execute("SELECT * FROM customers")
-print("\nUsing fetchone():")
-print(mycursor.fetchone())
+mycursor.execute("SELECT * FROM student")
 
-mycursor.execute("SELECT * FROM customers")
-print("\nUsing fetchmany():")
-print(mycursor.fetchmany(2))
-
-mycursor.execute("SELECT * FROM customers")
-print("\nUsing fetchall():")
-print(mycursor.fetchall())
+for x in mycursor:
+    print(x)
 
 mydb.close()
